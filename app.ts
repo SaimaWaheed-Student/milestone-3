@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('resume-form') as HTMLFormElement;
     const resumeContent = document.getElementById('resume-content') as HTMLElement;
-  
+
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-  
+
       // Capture user input from the form
       const name = (document.getElementById('name') as HTMLInputElement).value;
       const email = (document.getElementById('email') as HTMLInputElement).value;
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const education = (document.getElementById('education') as HTMLInputElement).value;
       const skills = (document.getElementById('skills') as HTMLInputElement).value;
       const experience = (document.getElementById('experience') as HTMLInputElement).value;
-  
+
       // Generate the resume using the captured data
       resumeContent.innerHTML = `
         <h3>Personal Information</h3>
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         <h3>Work Experience</h3>
         <p>${experience}</p>
+        
       `;
     });
   });
